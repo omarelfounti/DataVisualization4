@@ -19,3 +19,4 @@ t_stat, p_value = ttest_1samp(sample_data, popmean=mu)
 print("t-statistic:", t_stat)
 print("p-value:", p_value / 2 if t_stat > 0 else 1 - p_value / 2)  # one-tailed
 
+
