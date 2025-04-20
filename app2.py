@@ -1,9 +1,11 @@
 import pandas as pd
+import scikit_posthocs as sp
 from scipy.stats import f_oneway
 
 # Load the data
 file_path = "anova2.xlsx"  
 data = pd.read_excel(file_path)
+sp.posthoc_tukey(data, val_col='time', group_col='system')
 
 # Separate the groups
 group_A = data[data['system'] == 'A']['time']
