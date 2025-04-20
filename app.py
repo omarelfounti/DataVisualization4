@@ -38,3 +38,14 @@ t_stat, p_value = ttest_ind(group1, group2, equal_var=equal_var)
 print("Equal variances:", equal_var)
 print("t-statistic:", t_stat)
 print("p-value:", p_value)
+
+#Exercise 3
+
+# Placeholder for weights (replace with real data from 'ttest2.xlsx')
+first_born = np.random.normal(3.2, 0.5, 25)
+others = np.random.normal(3.5, 0.6, 25)
+
+t_stat, p_value = ttest_ind(first_born, others, equal_var=True)
+
+print("t-statistic:", t_stat)
+print("p-value (one-tailed):", p_value / 2 if t_stat < 0 else 1 - p_value / 2)
